@@ -1,11 +1,16 @@
 const express = require('express');
+const db = require('../db');  // Import the db connection
+
 const router = express.Router();
-const { getAllUsers, createUser } = require('../controllers/userController');
 
-// GET all users
-router.get('/', getAllUsers);
-
-// POST create a new user
-router.post('/', createUser);
+// Example route to fetch users
+router.get('/', (req, res) => {
+  db.query('SELECT * FROM users', (err, results) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+    res.json(results);  // Return results from the users table
+  });
+});
 
 module.exports = router;
