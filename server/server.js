@@ -4,6 +4,24 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const db = require('./db');
 
+const { PrismaClient } = require('@prisma/client');
+const prisma = new PrismaClient();
+
+async function testPrismaClient() {
+  try {
+    const users = await prisma.user.findMany();
+    console.log('Users:', users);
+  } catch (error) {
+    console.error('Error fetching users:', error);
+  } finally {
+    await prisma.$disconnect();
+  }
+}
+
+// Call the test function
+testPrismaClient();
+
+
 require('dotenv').config();
 
 const app = express();
