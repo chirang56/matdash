@@ -8,7 +8,8 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="flex justify-center items-center h-screen bg-gray-100">
+        <h1 className="text-4xl font-bold text-blue-500"> Tailwind CSS with Vite is Ready ! </h1>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -32,4 +33,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
