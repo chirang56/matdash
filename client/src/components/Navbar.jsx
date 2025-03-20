@@ -162,20 +162,21 @@ const Navbar = () => {
           <ul className="flex flex-col py-2">
             {["Home", "About", "Services", "Shop", "Contact"].map((item) => (
               <li key={item} className="px-4 py-2">
-                <NavLink
-                  to={`/${item.toLowerCase()}`}
-                  className={({ isActive }) =>
-                    `block text-gray-700 dark:text-gray-300 ${
-                      isActive ? "font-bold text-crimson-600 dark:text-crimson-400" : ""
-                    }`
-                  }
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item}
-                </NavLink>
+              <NavLink
+                to={`/${item.toLowerCase()}`}
+                className={({ isActive }) =>
+                  `block text-gray-700 dark:text-gray-300 ${
+                isActive ? "font-bold text-crimson-600 dark:text-crimson-400" : ""
+              }`
+          }
+                onClick={() => setMenuOpen(false)} // Close menu on link click
+          > 
+              {item}
+              </NavLink>
               </li>
-            ))}
+            ))} 
           </ul>
+
         </div>
       )}
     </nav>
