@@ -6,12 +6,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-12 mt-12">
+    <footer className="bg-white text-gray-900 pt-12 mt-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* About Section */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">About MatrixHub</h3>
+            <h3 className="text-blue-900 text-lg font-semibold mb-4">About MatrixHub</h3>
             <p className="mb-4 text-sm">
               MatrixHub offers premium electronics and tech accessories with fast shipping, 
               reliable customer service, and competitive prices.
@@ -34,7 +34,7 @@ const Footer = () => {
           
           {/* Quick Links */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-blue-900 text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/home" className="hover:text-white transition-colors">Home</Link>
@@ -56,7 +56,7 @@ const Footer = () => {
           
           {/* Customer Service */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Customer Service</h3>
+            <h3 className="text-blue-900 text-lg font-semibold mb-4">Customer Service</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/shipping-policy" className="hover:text-white transition-colors">Shipping Policy</Link>
@@ -78,7 +78,7 @@ const Footer = () => {
           
           {/* Newsletter */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Subscribe to Newsletter</h3>
+            <h3 className="text-blue-900 text-lg font-semibold mb-4">Subscribe to Newsletter</h3>
             <p className="mb-4 text-sm">Get the latest updates, deals and exclusive offers.</p>
             <form className="mb-4">
               <div className="flex">
@@ -97,7 +97,7 @@ const Footer = () => {
               </div>
             </form>
             <div>
-              <h4 className="text-white text-md font-semibold mb-2">Payment Methods</h4>
+              <h4 className="text-blue-900 text-md font-semibold mb-2">Payment Methods</h4>
               <div className="flex space-x-3">
                 <FaCreditCard className="text-gray-400 text-lg" />
                 <FaPaypal className="text-gray-400 text-lg" />

@@ -61,13 +61,13 @@ const Navbar = () => {
   };
 
   return (
-    <header className={`sticky top-0 z-50 w-full bg-white dark:bg-gray-900 shadow-md transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
-      <nav className="container mx-auto px-4 md:px-6 lg:px-8">
+    <header className={`sticky top-0 z-50 w-full bg-white shadow-md transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4'}`}>
+      <nav className="container mx-auto max-w-[1440px] px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/home" className="flex items-center space-x-2">
             <img src="/ok.png" className="w-10 h-10" alt="Matrix Hub" />
-            <span className="font-bold text-xl text-blue-700 dark:text-blue-400 hidden sm:inline-block">MatrixHub</span>
+            <span className="font-bold text-xl text-blue-700 hidden sm:inline-block">MatrixHub</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -77,8 +77,8 @@ const Navbar = () => {
                 <NavLink
                   to={`/${item.toLowerCase()}`}
                   className={({ isActive }) =>
-                    `relative font-medium text-sm text-gray-700 dark:text-gray-300 transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 ${
-                      isActive ? "text-blue-700 dark:text-blue-500 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-700 dark:after:bg-blue-500" : ""
+                    `relative font-medium text-sm text-gray-700 transition-all duration-300 hover:text-blue-600 ${
+                      isActive ? "text-blue-700 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-blue-700" : ""
                     }`
                   }
                 >
@@ -91,19 +91,19 @@ const Navbar = () => {
           {/* Desktop Search Bar */}
           <form 
             onSubmit={handleSearch}
-            className="hidden md:flex items-center border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden bg-gray-50 dark:bg-gray-800 flex-grow max-w-md mx-4"
+            className="hidden md:flex items-center border border-gray-300 rounded-lg overflow-hidden bg-gray-50 flex-grow max-w-md mx-4"
           >
             <input
               type="text"
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="px-4 py-2 w-full focus:outline-none bg-transparent dark:text-white"
+              className="px-4 py-2 w-full focus:outline-none bg-transparent"
               aria-label="Search products"
             />
             <button 
               type="submit"
-              className="px-4 py-2 text-blue-700 dark:text-blue-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="px-4 py-2 text-blue-700 hover:bg-gray-200"
               aria-label="Search"
             >
               <FaSearch />
@@ -114,7 +114,7 @@ const Navbar = () => {
           <div className="flex items-center space-x-5">
             {/* Wishlist Icon */}
             <Link to="/wishlist" className="relative hidden sm:block" aria-label="Wishlist">
-              <FaHeart className="text-gray-700 dark:text-gray-300 text-lg hover:text-red-500 dark:hover:text-red-400 transition-colors" />
+              <FaHeart className="text-gray-700 text-lg hover:text-red-500 transition-colors" />
               <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                 3
               </span>
@@ -129,37 +129,36 @@ const Navbar = () => {
                 aria-haspopup="true"
                 aria-label="User profile menu"
               >
-                <FaUser className="text-gray-700 dark:text-gray-300 text-lg hover:text-blue-600 dark:hover:text-blue-400 transition-colors" />
+                <FaUser className="text-gray-700 text-lg hover:text-blue-600 transition-colors" />
               </button>
               
               {profileDropdownOpen && (
-                <div className="absolute right-0 mt-3 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-lg py-2 z-50 border border-gray-200 dark:border-gray-700">
+                <div className="absolute right-0 mt-3 w-48 bg-white shadow-lg rounded-lg py-2 z-50 border border-gray-200">
                   <Link 
                     to="/profile" 
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
                     onClick={() => setProfileDropdownOpen(false)}
                   >
                     My Profile
                   </Link>
                   <Link 
                     to="/orders" 
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
                     onClick={() => setProfileDropdownOpen(false)}
                   >
                     My Orders
                   </Link>
                   <Link 
                     to="/wishlist" 
-                    className="block px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400 sm:hidden"
+                    className="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 sm:hidden"
                     onClick={() => setProfileDropdownOpen(false)}
                   >
                     My Wishlist
                   </Link>
-                  <div className="border-t border-gray-200 dark:border-gray-700 my-1"></div>
+                  <div className="border-t border-gray-200 my-1"></div>
                   <button 
-                    className="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-blue-600 dark:hover:text-blue-400"
+                    className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600"
                     onClick={() => {
-                      // Handle logout logic here
                       setProfileDropdownOpen(false);
                     }}
                   >
@@ -171,7 +170,7 @@ const Navbar = () => {
 
             {/* Cart Icon */}
             <Link to="/cart" className="relative" aria-label="Shopping cart with 2 items">
-              <FaShoppingCart className="text-gray-700 dark:text-gray-300 text-lg hover:text-blue-600 dark:hover:text-blue-400 transition-colors" />
+              <FaShoppingCart className="text-gray-700 text-lg hover:text-blue-600 transition-colors" />
               <span className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-0.5 rounded-full">
                 2
               </span>
@@ -179,7 +178,7 @@ const Navbar = () => {
 
             {/* Mobile Menu Toggle */}
             <button 
-              className="md:hidden text-gray-700 dark:text-gray-300" 
+              className="md:hidden text-gray-700" 
               onClick={() => setMenuOpen(!menuOpen)}
               aria-expanded={menuOpen}
               aria-label="Toggle navigation menu"
@@ -191,33 +190,32 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {menuOpen && (
-          <div className="md:hidden bg-white dark:bg-gray-800 mt-4 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+          <div className="md:hidden bg-white mt-4 rounded-lg shadow-lg border border-gray-200 overflow-hidden">
             {/* Mobile Search */}
-            <form onSubmit={handleSearch} className="p-4 border-b border-gray-200 dark:border-gray-700">
-              <div className="flex items-center bg-gray-50 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-lg overflow-hidden">
+            <form onSubmit={handleSearch} className="p-4 border-b border-gray-200">
+              <div className="flex items-center bg-gray-50 border border-gray-300 rounded-lg overflow-hidden">
                 <input
                   type="text"
                   placeholder="Search products..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="flex-1 px-4 py-2 bg-transparent dark:text-white focus:outline-none"
+                  className="flex-1 px-4 py-2 bg-transparent focus:outline-none"
                   aria-label="Search products"
                 />
-                <button type="submit" className="px-4 py-2 text-blue-700 dark:text-blue-400" aria-label="Search">
+                <button type="submit" className="px-4 py-2 text-blue-700" aria-label="Search">
                   <FaSearch />
                 </button>
               </div>
             </form>
-            
             {/* Mobile Menu Items */}
-            <ul className="divide-y divide-gray-200 dark:divide-gray-700">
+            <ul className="divide-y divide-gray-200">
               {["Home", "Shop", "About", "Services", "Contact"].map((item) => (
                 <li key={item}>
                   <NavLink
                     to={`/${item.toLowerCase()}`}
                     className={({ isActive }) =>
-                      `block px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 ${
-                        isActive ? "font-medium text-blue-700 dark:text-blue-500 bg-blue-50 dark:bg-gray-900" : ""
+                      `block px-4 py-3 text-gray-700 hover:bg-gray-100 ${
+                        isActive ? "font-medium text-blue-700 bg-blue-50" : ""
                       }`
                     }
                   > 

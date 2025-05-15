@@ -87,7 +87,7 @@ const Home = () => {
       {/* Value Propositions */}
       <section className="mb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 flex items-center">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 flex items-center">
             <div className="mr-4 bg-blue-100 text-blue-700 p-3 rounded-full">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
@@ -95,10 +95,10 @@ const Home = () => {
             </div>
             <div>
               <h3 className="font-bold mb-1">Free Shipping</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">On all orders over $50</p>
+              <p className="text-gray-600 text-sm">On all orders over $50</p>
             </div>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 flex items-center">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 flex items-center">
             <div className="mr-4 bg-blue-100 text-blue-700 p-3 rounded-full">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -106,10 +106,10 @@ const Home = () => {
             </div>
             <div>
               <h3 className="font-bold mb-1">2-Year Warranty</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">100% guarantee on all items</p>
+              <p className="text-gray-600 text-sm">100% guarantee on all items</p>
             </div>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 flex items-center">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 flex items-center">
             <div className="mr-4 bg-blue-100 text-blue-700 p-3 rounded-full">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -117,10 +117,10 @@ const Home = () => {
             </div>
             <div>
               <h3 className="font-bold mb-1">Secure Payment</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">100% secure transactions</p>
+              <p className="text-gray-600 text-sm">100% secure transactions</p>
             </div>
           </div>
-          <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 flex items-center">
+          <div className="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 flex items-center">
             <div className="mr-4 bg-blue-100 text-blue-700 p-3 rounded-full">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -128,7 +128,7 @@ const Home = () => {
             </div>
             <div>
               <h3 className="font-bold mb-1">24/7 Support</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">Expert assistance anytime</p>
+              <p className="text-gray-600 text-sm">Expert assistance anytime</p>
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@ const Home = () => {
       <section className="mb-12">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold">Shop by Category</h2>
-          <Link to="/shop" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+          <Link to="/shop" className="text-blue-600 hover:underline flex items-center">
             View All <FaArrowRight className="ml-1" size={14} />
           </Link>
         </div>
@@ -147,13 +147,13 @@ const Home = () => {
             <Link 
               key={category.id} 
               to={`/shop?category=${category.name.toLowerCase()}`} 
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md transition text-center group"
+              className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition text-center group"
             >
-              <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-blue-100 dark:bg-blue-900 rounded-full p-3 group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors">
+              <div className="w-12 h-12 mx-auto mb-3 flex items-center justify-center bg-blue-100 rounded-full p-3 group-hover:bg-blue-200 transition-colors">
                 <img src={category.icon} alt={category.name} className="max-w-full max-h-full" />
               </div>
               <h3 className="font-semibold mb-1">{category.name}</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">{category.count} products</p>
+              <p className="text-sm text-gray-500">{category.count} products</p>
             </Link>
           ))}
         </div>
@@ -185,13 +185,13 @@ const Home = () => {
       <section className="mb-12">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold">Featured Products</h2>
-          <Link to="/shop?featured=true" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+          <Link to="/shop?featured=true" className="text-blue-600 hover:underline flex items-center">
             View All <FaArrowRight className="ml-1" size={14} />
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredProducts.map((product) => (
-            <div key={product.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition group">
+            <div key={product.id} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
               <div className="relative">
                 <Link to={`/product/${product.id}`}>
                   <img 
@@ -202,7 +202,7 @@ const Home = () => {
                 </Link>
                 <button
                   onClick={() => toggleFavorite(product.id, true)}
-                  className="absolute top-2 right-2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-md"
+                  className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md"
                   aria-label={product.isFavorite ? "Remove from wishlist" : "Add to wishlist"}
                 >
                   {product.isFavorite ? (
@@ -219,7 +219,7 @@ const Home = () => {
               </div>
               <div className="p-4">
                 <Link to={`/product/${product.id}`}>
-                  <h3 className="font-semibold text-gray-800 dark:text-white mb-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <h3 className="font-semibold text-gray-800 mb-1 hover:text-blue-600 transition-colors">
                     {product.name}
                   </h3>
                 </Link>
@@ -249,11 +249,11 @@ const Home = () => {
 
       {/* Newsletter Subscription */}
       <section className="mb-12">
-        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-8">
+        <div className="bg-gray-100 rounded-lg p-8">
           <div className="md:flex items-center justify-between">
             <div className="md:w-1/2 mb-6 md:mb-0">
               <h2 className="text-2xl font-bold mb-2">Subscribe to Our Newsletter</h2>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-gray-600">
                 Stay updated with the latest products, exclusive offers, and tech news.
               </p>
             </div>
@@ -262,7 +262,7 @@ const Home = () => {
                 <input
                   type="email"
                   placeholder="Your email address"
-                  className="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white"
+                  className="flex-grow px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 border border-gray-300"
                   required
                 />
                 <button
@@ -272,7 +272,7 @@ const Home = () => {
                   Subscribe
                 </button>
               </form>
-              <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">
+              <p className="text-xs text-gray-500 mt-2">
                 By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.
               </p>
             </div>
@@ -284,13 +284,13 @@ const Home = () => {
       <section className="mb-12">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold">Trending Now</h2>
-          <Link to="/shop?trending=true" className="text-blue-600 dark:text-blue-400 hover:underline flex items-center">
+          <Link to="/shop?trending=true" className="text-blue-600 hover:underline flex items-center">
             View All <FaArrowRight className="ml-1" size={14} />
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {trendingProducts.map((product) => (
-            <div key={product.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-md transition group">
+            <div key={product.id} className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
               <div className="relative">
                 <Link to={`/product/${product.id}`}>
                   <img 
@@ -301,7 +301,7 @@ const Home = () => {
                 </Link>
                 <button
                   onClick={() => toggleFavorite(product.id, false)}
-                  className="absolute top-2 right-2 bg-white dark:bg-gray-800 p-2 rounded-full shadow-md"
+                  className="absolute top-2 right-2 bg-white p-2 rounded-full shadow-md"
                   aria-label={product.isFavorite ? "Remove from wishlist" : "Add to wishlist"}
                 >
                   {product.isFavorite ? (
@@ -318,7 +318,7 @@ const Home = () => {
               </div>
               <div className="p-4">
                 <Link to={`/product/${product.id}`}>
-                  <h3 className="font-semibold text-gray-800 dark:text-white mb-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <h3 className="font-semibold text-gray-800 mb-1 hover:text-blue-600 transition-colors">
                     {product.name}
                   </h3>
                 </Link>
@@ -351,13 +351,13 @@ const Home = () => {
         <h2 className="text-2xl font-bold mb-6">What Our Customers Say</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[1, 2, 3].map((item) => (
-            <div key={item} className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+            <div key={item} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
               <div className="flex text-yellow-400 mb-4">
                 {[...Array(5)].map((_, i) => (
                   <FaStar key={i} />
                 ))}
               </div>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
+              <p className="text-gray-600 mb-4">
                 "The products I received exceeded my expectations. The quality is fantastic and the shipping was incredibly fast. Will definitely shop here again!"
               </p>
               <div className="flex items-center">
