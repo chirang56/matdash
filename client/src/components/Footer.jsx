@@ -4,16 +4,15 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaCreditCard, FaPaypal,
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-white text-gray-900 pt-12 mt-12">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* About Section */}
           <div>
             <h3 className="text-blue-900 text-lg font-semibold mb-4">About MatrixHub</h3>
             <p className="mb-4 text-sm">
-              MatrixHub offers premium electronics and tech accessories with fast shipping, 
+              MatrixHub offers premium electronics and tech accessories with fast shipping,
               reliable customer service, and competitive prices.
             </p>
             <div className="flex space-x-4">
@@ -31,52 +30,26 @@ const Footer = () => {
               </a>
             </div>
           </div>
-          
-          {/* Quick Links */}
           <div>
             <h3 className="text-blue-900 text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/home" className="hover:text-white transition-colors">Home</Link>
-              </li>
-              <li>
-                <Link to="/shop" className="hover:text-white transition-colors">Shop</Link>
-              </li>
-              <li>
-                <Link to="/about" className="hover:text-white transition-colors">About Us</Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-white transition-colors">Contact</Link>
-              </li>
-              <li>
-                <Link to="/faq" className="hover:text-white transition-colors">FAQ</Link>
-              </li>
+              <li><Link to="/home" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/shop" className="hover:text-white transition-colors">Shop</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><Link to="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
             </ul>
           </div>
-          
-          {/* Customer Service */}
           <div>
             <h3 className="text-blue-900 text-lg font-semibold mb-4">Customer Service</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/shipping-policy" className="hover:text-white transition-colors">Shipping Policy</Link>
-              </li>
-              <li>
-                <Link to="/returns-policy" className="hover:text-white transition-colors">Returns & Refunds</Link>
-              </li>
-              <li>
-                <Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link to="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link>
-              </li>
-              <li>
-                <Link to="/track-order" className="hover:text-white transition-colors">Track Order</Link>
-              </li>
+              <li><Link to="/shipping-policy" className="hover:text-white transition-colors">Shipping Policy</Link></li>
+              <li><Link to="/returns-policy" className="hover:text-white transition-colors">Returns & Refunds</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-conditions" className="hover:text-white transition-colors">Terms & Conditions</Link></li>
+              <li><Link to="/track-order" className="hover:text-white transition-colors">Track Order</Link></li>
             </ul>
           </div>
-          
-          {/* Newsletter */}
           <div>
             <h3 className="text-blue-900 text-lg font-semibold mb-4">Subscribe to Newsletter</h3>
             <p className="mb-4 text-sm">Get the latest updates, deals and exclusive offers.</p>
@@ -107,8 +80,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        
-        {/* Bottom Bar */}
         <div className="border-t border-gray-800 py-6 text-sm text-center md:flex md:justify-between md:text-left">
           <p>&copy; {currentYear} MatrixHub. All rights reserved.</p>
           <div className="mt-2 md:mt-0">
