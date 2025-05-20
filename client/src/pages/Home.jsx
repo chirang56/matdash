@@ -68,7 +68,7 @@ const Home = () => {
                 <Link to="/shop" className="inline-block bg-white text-blue-700 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors shadow-md">
                   Shop Now
                 </Link>
-                <Link to="/deals" className="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:bg-opacity-10 transition-colors">
+                <Link to="/deals" className="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-500 hover:bg-opacity-10 transition-colors">
                   View Deals
                 </Link>
               </div>
